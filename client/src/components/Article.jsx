@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
-import Paywall from "./Paywall";
+import Paywall from "./Paywall"
 import { makeEmojiList } from "../utils";
 
 const initialState = {
