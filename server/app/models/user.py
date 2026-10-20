@@ -9,3 +9,7 @@ class User(db.Model,SerializerMixin):
     name:Mapped[str]
 
     articles:Mapped[list["Article"]]=relationship(back_populates="user",cascade="all,delete-orphan")
+
+
+    def __repr__(self):
+        return f"<User {self.id} Name:{self.name}>"
