@@ -6,6 +6,8 @@ from typing import List
 class User(db.Model,SerializerMixin):
     __tablename__="users"
 
+    serialize_rules=("-articles.user",)
+
     id:Mapped[int]=mapped_column(primary_key=True)
     name:Mapped[str]
 
