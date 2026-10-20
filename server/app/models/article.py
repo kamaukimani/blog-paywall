@@ -4,7 +4,7 @@ from sqlalchemy import func,ForeignKey
 from sqlalchemy_serializer import SerializerMixin 
 from datetime import datetime
 
-class Article(db.Model,SerilizerMixin):
+class Article(db.Model,SerializerMixin):
     __tablename__="articles"
 
     id:Mapped[int]=mapped_column(primary_key=True)
