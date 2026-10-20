@@ -7,6 +7,8 @@ from datetime import datetime
 class Article(db.Model,SerializerMixin):
     __tablename__="articles"
 
+    serialize_rules=("-user.reviews",)
+
     id:Mapped[int]=mapped_column(primary_key=True)
     author:Mapped[str]
     title:Mapped[str]
